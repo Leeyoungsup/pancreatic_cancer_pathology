@@ -1,0 +1,12 @@
+gene_set,n_genes
+tcga_rna_all,59427
+tcga_rna_protein_coding,19938
+cptac_rna,28057
+cptac_proteome,11662
+cptac_phosphoproteome,8004
+COMMON:tcga_rna_all__cptac_rna,25446
+COMMON:tcga_rna_protein_coding__cptac_rna,18879
+COMMON:tcga_rna_all__cptac_proteome,11470
+COMMON:tcga_rna_all__cptac_phosphoproteome,7884
+COMMON:tcga_rna_all__cptac_rna__proteome,11459
+COMMON:tcga_rna_all__cptac_rna__proteome__phosphoproteome,7162

@@ -1,0 +1,141 @@
+cohort,subject_id,age_years,sex,race,vital_status,os_time_days,os_event,diagnosis,pathologic_stage,pathologic_t,pathologic_n,pathologic_m,tumor_grade,has_wsi,has_rnaseq
+CPTAC_PDAC,C3L-00017,69,male,White,Living,426.0,0,PDAC,Stage IIA,pT3,pN0,pMX,,True,True
+CPTAC_PDAC,C3L-00102,42,male,White,Deceased,249.0,1,PDAC,Stage III,pT2,pN2,pMX,,True,True
+CPTAC_PDAC,C3L-00189,68,female,,Deceased,1035.0,1,PDAC,Stage IIB,pT2,pN1,pM0,,True,True
+CPTAC_PDAC,C3L-00277,69,male,White,Deceased,610.0,1,PDAC,Stage IIB,pT3,pN1,pMX,,True,True
+CPTAC_PDAC,C3L-00401,62,female,,Living,1228.0,0,PDAC,Stage IIB,pT2,pN1,pM0,,True,True
+CPTAC_PDAC,C3L-00589,80,male,White,Living,1046.0,0,PDAC,Stage IIB,pT2,pN1,pM0,,True,True
+CPTAC_PDAC,C3L-00598,61,female,,Deceased,422.0,1,PDAC,Stage III,pT2,pN2,pM0,,True,True
+CPTAC_PDAC,C3L-00599,62,male,,Living,1189.0,0,PDAC,Stage IIB,pT2,pN1,pM0,,True,True
+CPTAC_PDAC,C3L-00622,72,male,,Deceased,311.0,1,PDAC,Stage IIB,pT2,pN1,pM0,,True,True
+CPTAC_PDAC,C3L-00625,34,female,,Living,864.0,0,PDAC,Stage III,pT2,pN2,pM0,,True,True
+CPTAC_PDAC,C3L-00640,59,female,White,Living,594.0,0,PDAC,Stage IIB,pT3,pN1,pMX,,True,True
+CPTAC_PDAC,C3L-00819,74,male,White,Deceased,602.0,1,PDAC,Stage IIB,pT2,pN1,pM0,,True,True
+CPTAC_PDAC,C3L-00881,80,male,White,Living,3.0,0,PDAC,Stage IIB,pT2,pN1,pMX,,True,True
+CPTAC_PDAC,C3L-00928,58,female,White,Deceased,761.0,1,PDAC,Stage IIB,pT3,pN1,pM0,,True,True
+CPTAC_PDAC,C3L-01031,64,female,,Living,369.0,0,PDAC,Stage IB,pT2,pN0,pM0,,True,True
+CPTAC_PDAC,C3L-01036,64,male,,Living,765.0,0,PDAC,Stage IIB,pT2,pN1,pM0,,True,True
+CPTAC_PDAC,C3L-01037,42,male,,Deceased,300.0,1,PDAC,Stage IIB,pT3,pN1,pM0,,True,True
+CPTAC_PDAC,C3L-01051,60,male,,Living,0.0,0,PDAC,Stage IIB,pT2,pN1,pM0,,True,True
+CPTAC_PDAC,C3L-01052,64,female,,Deceased,743.0,1,PDAC,Stage IA,pT1c,pN0,pM0,,True,True
+CPTAC_PDAC,C3L-01053,76,female,,Deceased,191.0,1,PDAC,Stage IIB,pT2,pN1,pM0,,True,True
+CPTAC_PDAC,C3L-01054,38,female,,Living,794.0,0,PDAC,Stage IIB,pT2,pN1,pM0,,True,True
+CPTAC_PDAC,C3L-01124,70,female,,Living,399.0,0,PDAC,Stage III,pT2,pN2,pMX,,True,True
+CPTAC_PDAC,C3L-01328,71,male,White,Living,270.0,0,PDAC,Stage IIB,pT2,pN1,pMX,,True,True
+CPTAC_PDAC,C3L-01453,69,male,White,Living,5.0,0,Adenosquamous carcinoma,Stage IIA,pT3,pN0,pMX,,True,True
+CPTAC_PDAC,C3L-01598,73,female,White,Deceased,912.0,1,PDAC,Stage IB,pT2,pN0,pM0,,True,True
+CPTAC_PDAC,C3L-01637,78,female,White,Deceased,715.0,1,PDAC,Stage IIB,pT2,pN1,pM0,,True,True
+CPTAC_PDAC,C3L-01662,60,female,White,Deceased,344.0,1,PDAC,Stage III,pT2,pN2,pM0,,True,True
+CPTAC_PDAC,C3L-01687,78,female,,Deceased,376.0,1,PDAC,Stage III,pT3,pN2,pM0,,True,True
+CPTAC_PDAC,C3L-01689,62,male,,Deceased,594.0,1,PDAC,Stage IIB,pT2,pN1,pM0,,True,True
+CPTAC_PDAC,C3L-01703,62,male,,Deceased,287.0,1,PDAC,Stage IIA,pT3,pN0,pM0,,True,True
+CPTAC_PDAC,C3L-01971,66,male,White,Deceased,276.0,1,PDAC,Stage IA,pT1c,pN0,pMX,,True,True
+CPTAC_PDAC,C3L-02109,79,female,,Living,261.0,0,PDAC,Stage IIB,pT3,pN1,pM0,,True,True
+CPTAC_PDAC,C3L-02112,66,male,,Living,679.0,0,PDAC,Stage III,pT3,pN2,pM0,,True,True
+CPTAC_PDAC,C3L-02115,80,male,,Deceased,723.0,1,PDAC,Stage III,pT2,pN2,pM0,,True,True
+CPTAC_PDAC,C3L-02116,67,male,,Living,716.0,0,PDAC,Stage IB,pT2,pN0,pM0,,True,True
+CPTAC_PDAC,C3L-02118,67,female,,Deceased,632.0,1,PDAC,Stage IB,pT2,pN0,pM0,,True,True
+CPTAC_PDAC,C3L-02463,63,male,White,Living,740.0,0,PDAC,Stage IB,pT2,pN0,pMX,,True,True
+CPTAC_PDAC,C3L-02604,84,female,White,Deceased,118.0,1,PDAC,Stage IIB,pT2,pN1,pMX,,True,True
+CPTAC_PDAC,C3L-02606,68,female,,Deceased,403.0,1,Adenosquamous carcinoma,Stage IIB,pT2,pN1,pM0,,True,True
+CPTAC_PDAC,C3L-02610,80,male,,Deceased,190.0,1,PDAC,Stage IIA,pT3,pN0,pM0,,True,True
+CPTAC_PDAC,C3L-02613,52,female,,Deceased,211.0,1,Adenosquamous carcinoma,Stage IIB,pT3,pN1,pM0,,True,True
+CPTAC_PDAC,C3L-02701,72,male,,Deceased,243.0,1,PDAC,,pT2,pNX,pMX,,True,True
+CPTAC_PDAC,C3L-02809,84,male,White,Deceased,68.0,1,PDAC,Stage IIB,pT3,pN1,pMX,,True,True
+CPTAC_PDAC,C3L-02890,65,male,,Living,785.0,0,PDAC,Stage III,pT3,pN2,pM0,,True,True
+CPTAC_PDAC,C3L-02897,80,male,White,Living,256.0,0,PDAC,Stage IB,pT2,pN0,pM0,,True,True
+CPTAC_PDAC,C3L-02899,73,male,White,Deceased,90.0,1,PDAC,Stage IV,pT3,pN2,pM1,,True,True
+CPTAC_PDAC,C3L-03123,60,female,,Living,817.0,0,PDAC,Stage IIB,pT3,pN1,pM0,,True,True
+CPTAC_PDAC,C3L-03356,71,male,,Living,549.0,0,PDAC,Stage IIB,pT2,pN1,pM0,,True,True
+CPTAC_PDAC,C3L-03388,68,male,,Deceased,11.0,1,PDAC,Stage III,pT2,pN2,pM0,,True,True
+CPTAC_PDAC,C3L-03394,65,female,,Living,369.0,0,PDAC,Stage IA,pT1c,pN0,pMX,,True,True
+CPTAC_PDAC,C3L-03395,78,male,,,,0,PDAC,Stage III,pT2,pN2,pM0,,True,True
+CPTAC_PDAC,C3L-03628,69,female,,Living,466.0,0,PDAC,Stage III,pT2,pN2,pM0,,True,True
+CPTAC_PDAC,C3L-03630,78,male,,Living,78.0,0,PDAC,Stage IIB,pT3,pN1,pM0,,True,True
+CPTAC_PDAC,C3L-03632,74,male,,Living,330.0,0,PDAC,Stage IB,pT2,pN0,pM0,,True,True
+CPTAC_PDAC,C3L-03635,63,male,,Living,313.0,0,PDAC,,pT2,pNX,pM0,,True,True
+CPTAC_PDAC,C3L-03639,76,male,,Deceased,246.0,1,PDAC,Stage IB,pT2,pN0,pM0,,True,True
+CPTAC_PDAC,C3L-03743,71,female,White,Deceased,,1,PDAC,Stage IIB,pT2,pN1,pMX,,True,True
+CPTAC_PDAC,C3L-04027,69,male,,Living,240.0,0,PDAC,Stage IA,pT1c,pN0,pM0,,True,True
+CPTAC_PDAC,C3L-04072,55,male,Black or African American,Deceased,225.0,1,PDAC,Stage III,pT3,pN2,pM0,,True,True
+CPTAC_PDAC,C3L-04080,70,male,White,Deceased,20.0,1,PDAC,Stage IIB,pT2,pN1,pM0,,True,True
+CPTAC_PDAC,C3L-04473,67,female,,Deceased,290.0,1,PDAC,Stage III,pT2,pN2,pM0,,True,True
+CPTAC_PDAC,C3L-04475,77,male,,Living,300.0,0,PDAC,Stage III,pT2,pN2,pM0,,True,True
+CPTAC_PDAC,C3L-04479,66,male,,Living,356.0,0,PDAC,Stage IIB,pT1c,pN1,pM0,,True,True
+CPTAC_PDAC,C3L-04495,36,female,,Deceased,288.0,1,PDAC,Stage III,pT3,pN2,pM0,,True,True
+CPTAC_PDAC,C3L-04848,71,female,,Deceased,196.0,1,PDAC,Stage IIB,pT3,pN1,pM0,,True,True
+CPTAC_PDAC,C3L-04853,85,female,,Deceased,279.0,1,PDAC,Stage IB,pT2,pN0,pM0,,True,True
+CPTAC_PDAC,C3N-00198,55,male,White,Living,1364.0,0,PDAC,Stage III,pT2,pN2,pMX,,True,True
+CPTAC_PDAC,C3N-00249,71,male,White,Living,1098.0,0,PDAC,Stage IIB,pT3,pN1,pMX,,True,True
+CPTAC_PDAC,C3N-00302,58,male,,Deceased,323.0,1,PDAC,Stage IV,pT2,pN2,pM1,,True,True
+CPTAC_PDAC,C3N-00303,65,male,,Deceased,599.0,1,PDAC,Stage III,pT3,pN2,pM0,,True,True
+CPTAC_PDAC,C3N-00436,69,female,,Living,652.0,0,PDAC,Stage IIA,pT3,pN0,pM0,,True,True
+CPTAC_PDAC,C3N-00511,45,female,,Deceased,1001.0,1,PDAC,Stage IIB,pT2,pN1,pM0,,True,True
+CPTAC_PDAC,C3N-00512,42,male,,Deceased,1006.0,1,PDAC,Stage III,pT2,pN2,pM0,,True,True
+CPTAC_PDAC,C3N-00513,63,male,,Deceased,425.0,1,PDAC,Stage IIB,pT2,pN1,pM0,,True,True
+CPTAC_PDAC,C3N-00514,60,male,,Deceased,795.0,1,Adenosquamous carcinoma,Stage III,pT2,pN2,pM0,,True,True
+CPTAC_PDAC,C3N-00516,68,male,,Living,688.0,0,PDAC,Stage IB,pT2,pN0,pM0,,True,True
+CPTAC_PDAC,C3N-00517,69,female,,Deceased,901.0,1,PDAC,Stage IIB,pT2,pN1,pM0,,True,True
+CPTAC_PDAC,C3N-00518,69,male,,Deceased,469.0,1,PDAC,Stage IIA,pT3,pN0,pM0,,True,True
+CPTAC_PDAC,C3N-00709,81,male,White,,,0,PDAC,,pTX,pNX,pMX,,True,True
+CPTAC_PDAC,C3N-00957,74,male,White,Living,880.0,0,PDAC,Stage IIA,pT3,pN0,pMX,,True,True
+CPTAC_PDAC,C3N-01011,77,female,White,Living,1068.0,0,PDAC,Stage III,pT2,pN2,pMX,,True,True
+CPTAC_PDAC,C3N-01012,71,male,White,Living,616.0,0,PDAC,Stage IB,pT2,pN0,pMX,,True,True
+CPTAC_PDAC,C3N-01165,63,female,,Deceased,240.0,1,PDAC,Stage III,pT2,pN2,pM0,,True,True
+CPTAC_PDAC,C3N-01166,62,female,,Living,678.0,0,PDAC,Stage III,pT3,pN2,pM0,,True,True
+CPTAC_PDAC,C3N-01167,77,female,,Living,640.0,0,PDAC,Stage IIB,pT2,pN1,pM0,,True,True
+CPTAC_PDAC,C3N-01168,60,female,,Deceased,460.0,1,PDAC,Stage IIB,pT3,pN1,pM0,,True,True
+CPTAC_PDAC,C3N-01375,70,female,,Deceased,142.0,1,PDAC,Stage IIB,pT2,pN1,pM0,,True,True
+CPTAC_PDAC,C3N-01380,65,male,,Deceased,400.0,1,PDAC,Stage IV,pT2,pN2,pM1,,True,True
+CPTAC_PDAC,C3N-01381,43,female,,Deceased,454.0,1,PDAC,Stage IIB,pT1c,pN1,pM0,,True,True
+CPTAC_PDAC,C3N-01382,74,female,,Deceased,734.0,1,PDAC,Stage III,pT2,pN2,pM0,,True,True
+CPTAC_PDAC,C3N-01383,80,female,,Living,667.0,0,PDAC,Stage III,pT2,pN2,pM0,,True,True
+CPTAC_PDAC,C3N-01388,53,female,,Deceased,810.0,1,PDAC,Stage III,pT2,pN2,pM0,,True,True
+CPTAC_PDAC,C3N-01502,75,male,White,Living,1049.0,0,PDAC,Stage IIB,pT3,pN1,pMX,,True,True
+CPTAC_PDAC,C3N-01714,63,male,,Deceased,435.0,1,PDAC,Stage III,pT2,pN2,pM0,,True,True
+CPTAC_PDAC,C3N-01715,61,female,,Deceased,108.0,1,PDAC,,pT3,pNX,pMX,,True,True
+CPTAC_PDAC,C3N-01716,50,male,,Deceased,335.0,1,PDAC,Stage IV,pT4,pN2,pM1,,True,True
+CPTAC_PDAC,C3N-01719,63,female,,Living,454.0,0,PDAC,,pT2,pNX,pM0,,True,True
+CPTAC_PDAC,C3N-01997,63,male,,Living,857.0,0,PDAC,Stage IB,pT2,pN0,pMX,,True,True
+CPTAC_PDAC,C3N-01998,69,male,,Deceased,186.0,1,PDAC,Stage IIB,pT2,pN1,pMX,,True,True
+CPTAC_PDAC,C3N-02010,62,female,Black or African American,Living,359.0,0,PDAC,Stage III,pT3,pN2,pMX,,True,True
+CPTAC_PDAC,C3N-02295,56,female,,Deceased,371.0,1,PDAC,Stage IB,pT2,pN0,pMX,,True,True
+CPTAC_PDAC,C3N-02573,41,female,,Living,479.0,0,PDAC,Stage IIB,pT3,pN1,pMX,,True,True
+CPTAC_PDAC,C3N-02579,51,female,,Deceased,358.0,1,PDAC,Stage IA,pT1a,pN0,pMX,,True,True
+CPTAC_PDAC,C3N-02585,65,male,,Living,754.0,0,PDAC,Stage IA,pT1c,pN0,pMX,,True,True
+CPTAC_PDAC,C3N-02589,71,male,,Deceased,458.0,1,PDAC,Stage IA,pT1c,pN0,pM0,,True,True
+CPTAC_PDAC,C3N-02592,63,female,,Deceased,294.0,1,PDAC,Stage IIB,pT3,pN1,pM0,,True,True
+CPTAC_PDAC,C3N-02768,46,male,,Deceased,430.0,1,Adenosquamous carcinoma,Stage IIB,pT2,pN1,pMX,,True,True
+CPTAC_PDAC,C3N-02940,64,male,,Living,664.0,0,PDAC,Stage III,pT3,pN2,pMX,,True,True
+CPTAC_PDAC,C3N-02944,61,female,,Living,609.0,0,PDAC,Stage IB,pT2,pN0,pMX,,True,True
+CPTAC_PDAC,C3N-02971,78,female,White,Deceased,70.0,1,PDAC,Stage IIA,pT3,pN0,pMX,,True,True
+CPTAC_PDAC,C3N-02998,64,female,,Deceased,122.0,1,PDAC,Stage III,pT3,pN2,pM0,,True,True
+CPTAC_PDAC,C3N-03000,57,male,,Deceased,122.0,1,PDAC,Stage IV,pT3,pN2,pM1,,True,True
+CPTAC_PDAC,C3N-03006,64,female,,Living,708.0,0,PDAC,Stage IIB,pT2,pN1,pM0,,True,True
+CPTAC_PDAC,C3N-03007,59,male,,Deceased,58.0,1,PDAC,Stage III,pT2,pN2,pM0,,True,True
+CPTAC_PDAC,C3N-03039,73,female,White,,,0,PDAC,,pTX,pNX,pMX,,True,True
+CPTAC_PDAC,C3N-03061,62,female,,Deceased,348.0,1,PDAC,Stage IIB,pT2,pN1,pMX,,True,True
+CPTAC_PDAC,C3N-03069,50,female,,,,0,PDAC,Stage III,pT3,pN2,pM0,,True,True
+CPTAC_PDAC,C3N-03086,69,male,,Living,733.0,0,PDAC,Stage IIB,pT3,pN1,pMX,,True,True
+CPTAC_PDAC,C3N-03173,64,male,White,Living,32.0,0,PDAC,Stage III,pT2,pN2,pMX,,True,True
+CPTAC_PDAC,C3N-03190,31,male,,Deceased,398.0,1,PDAC,Stage IIB,pT2,pN1,pM0,,True,True
+CPTAC_PDAC,C3N-03211,43,male,,Deceased,285.0,1,PDAC,Stage III,pT2,pN2,pMX,,True,True
+CPTAC_PDAC,C3N-03426,68,female,,Deceased,122.0,1,PDAC,Stage IV,pT3,pN1,pM1,,True,True
+CPTAC_PDAC,C3N-03428,63,male,,Deceased,285.0,1,PDAC,Stage IV,pT2,pNX,pM1,,True,True
+CPTAC_PDAC,C3N-03430,54,female,,Deceased,39.0,1,PDAC,Stage IV,pT3,pNX,pMX,,True,True
+CPTAC_PDAC,C3N-03439,56,female,,Deceased,457.0,1,PDAC,Stage IIB,pT1c,pN1,pM0,,True,True
+CPTAC_PDAC,C3N-03440,54,female,,Living,315.0,0,PDAC,Stage IB,pT2,pN0,pM0,,True,True
+CPTAC_PDAC,C3N-03665,63,male,,Living,728.0,0,PDAC,Stage III,pT2,pN2,pM0,,True,True
+CPTAC_PDAC,C3N-03666,63,male,,Deceased,701.0,1,PDAC,Stage IIB,pT2,pN1,pM0,,True,True
+CPTAC_PDAC,C3N-03670,60,male,,Living,377.0,0,PDAC,Stage III,pT2,pN2,pM0,,True,True
+CPTAC_PDAC,C3N-03754,44,male,,Living,483.0,0,PDAC,Stage III,pT2,pN2,pM0,,True,True
+CPTAC_PDAC,C3N-03780,69,female,,Deceased,20.0,1,PDAC,Stage IB,pT2,pN0,pM0,,True,True
+CPTAC_PDAC,C3N-03839,54,female,,Living,696.0,0,PDAC,Stage IIB,pT2,pN1,pM0,,True,True
+CPTAC_PDAC,C3N-03840,59,female,,Living,696.0,0,PDAC,Stage IIB,pT2,pN1,pM0,,True,True
+CPTAC_PDAC,C3N-03853,49,female,,Living,259.0,0,PDAC,Stage III,pT2,pN2,pM0,,True,True
+CPTAC_PDAC,C3N-03884,64,female,,Living,368.0,0,PDAC,Stage III,pT2,pN2,pM0,,True,True
+CPTAC_PDAC,C3N-04119,54,male,,Deceased,305.0,1,PDAC,Stage IIB,pT2,pN1,pMX,,True,True
+CPTAC_PDAC,C3N-04126,42,male,,Deceased,348.0,1,PDAC,Stage III,pT2,pN2,pM0,,True,True
+CPTAC_PDAC,C3N-04282,75,male,,Deceased,303.0,1,PDAC,Stage IV,pT2,pN1,pM1,,True,True
+CPTAC_PDAC,C3N-04283,66,female,,Deceased,1.0,1,PDAC,Stage III,pT3,pN2,pM0,,True,True
+CPTAC_PDAC,C3N-04284,80,female,,Deceased,8.0,1,PDAC,Stage III,pT2,pN2,pM0,,True,True

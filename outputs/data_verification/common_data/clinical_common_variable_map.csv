@@ -1,0 +1,16 @@
+harmonized_variable,tcga_source,cptac_source,note,available_in_both
+subject_id,patient_id,case_id,환자/케이스 ID,True
+age_years,age_at_diagnosis / 365.25,age,진단 시 연령,True
+sex,gender,sex,성별,True
+race,race,race,인종,True
+vital_status,vital_status,vital_status,생존 상태,True
+os_time_days,OS_time,follow_up_days,"전체생존/추적 기간, days",True
+os_event,OS_event,vital_status == Deceased,사망 event,True
+diagnosis,primary_diagnosis,histology_diagnosis,진단명/조직형,True
+pathologic_stage,ajcc_pathologic_stage,tumor_stage_pathological,병리 stage,True
+pathologic_t,ajcc_pathologic_t,pathologic_staging_primary_tumor_pt,병리 T stage,True
+pathologic_n,ajcc_pathologic_n,pathologic_staging_regional_lymph_nodes_pn,병리 N stage,True
+pathologic_m,ajcc_pathologic_m,pathologic_staging_distant_metastasis_pm,병리 M stage,True
+tumor_grade,tumor_grade,,TCGA에만 있음,False
+has_wsi,selected_wsi_file_name,n_wsi_series,병리 WSI 보유 여부,True
+has_rnaseq,n_rnaseq_files,rna_cases.csv,RNA-seq 보유 여부,True
