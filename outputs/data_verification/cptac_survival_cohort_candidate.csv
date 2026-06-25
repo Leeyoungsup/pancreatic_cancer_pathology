@@ -1,0 +1,141 @@
+case_id,has_wsi_series,n_wsi_series,n_wsi_series_observed,total_series_size_mb,series_descriptions,OS_time,OS_event,follow_up_days,vital_status,histology_diagnosis,age,sex,race,tumor_site,tumor_size_cm,tumor_stage_pathological,pathologic_staging_primary_tumor_pt,pathologic_staging_regional_lymph_nodes_pn,pathologic_staging_distant_metastasis_pm,residual_tumor
+C3L-00017,True,6,6,950.161492,HE normal | HE tumor,426.0,0,426.0,Living,PDAC,69,Male,White,head,4.5,Stage IIA,pT3,pN0,pMX,RX:  Presence of residual tumor cannot be assessed
+C3L-00102,True,3,3,545.004294,HE normal | HE tumor,249.0,1,249.0,Deceased,PDAC,42,Male,White,head,3.0,Stage III,pT2,pN2,pMX,R0:  No residual tumor
+C3L-00189,True,4,4,993.9197700000001,HE normal | HE tumor,1035.0,1,1035.0,Deceased,PDAC,68,Female,,head,2.7,Stage IIB,pT2,pN1,pM0,R1:  Microscopic residual tumor
+C3L-00277,True,6,6,1082.998032,HE normal | HE tumor,610.0,1,610.0,Deceased,PDAC,69,Male,White,tail,5.0,Stage IIB,pT3,pN1,pMX,R2:  Macroscopic residual tumor
+C3L-00401,True,4,4,760.852028,HE normal | HE tumor,1228.0,0,1228.0,Living,PDAC,62,Female,,body,2.8,Stage IIB,pT2,pN1,pM0,R0:  No residual tumor
+C3L-00589,True,3,3,480.249276,HE normal | HE tumor,1046.0,0,1046.0,Living,PDAC,80,Male,White,head,2.5,Stage IIB,pT2,pN1,pM0,R0:  No residual tumor
+C3L-00598,True,4,4,596.763676,HE normal | HE tumor,422.0,1,422.0,Deceased,PDAC,61,Female,,head,3.0,Stage III,pT2,pN2,pM0,R0:  No residual tumor
+C3L-00599,True,4,4,423.93778,HE normal | HE tumor,1189.0,0,1189.0,Living,PDAC,62,Male,,head,3.0,Stage IIB,pT2,pN1,pM0,R0:  No residual tumor
+C3L-00622,True,4,4,711.105796,HE normal | HE tumor,311.0,1,311.0,Deceased,PDAC,72,Male,,head,3.5,Stage IIB,pT2,pN1,pM0,R1:  Microscopic residual tumor
+C3L-00625,True,5,5,937.405984,HE normal | HE tumor,864.0,0,864.0,Living,PDAC,34,Female,,head,2.5,Stage III,pT2,pN2,pM0,R0:  No residual tumor
+C3L-00640,True,6,6,691.856776,HE normal | HE tumor,594.0,0,594.0,Living,PDAC,59,Female,White,body,4.5,Stage IIB,pT3,pN1,pMX,RX:  Presence of residual tumor cannot be assessed
+C3L-00819,True,3,3,492.152708,HE normal | HE tumor,602.0,1,602.0,Deceased,PDAC,74,Male,White,head,2.8,Stage IIB,pT2,pN1,pM0,R0:  No residual tumor
+C3L-00881,True,6,6,749.3663779999999,HE normal | HE tumor,3.0,0,3.0,Living,PDAC,80,Male,White,head,2.2,Stage IIB,pT2,pN1,pMX,RX:  Presence of residual tumor cannot be assessed
+C3L-00928,True,4,4,335.300408,HE normal | HE tumor,761.0,1,761.0,Deceased,PDAC,58,Female,White,tail,4.5,Stage IIB,pT3,pN1,pM0,R0:  No residual tumor
+C3L-01031,True,3,3,1176.4010859999999,HE normal | HE tumor,369.0,0,369.0,Living,PDAC,64,Female,,body and tail,3.5,Stage IB,pT2,pN0,pM0,R0:  No residual tumor
+C3L-01036,True,3,3,770.409382,HE normal | HE tumor,765.0,0,765.0,Living,PDAC,64,Male,,head,2.5,Stage IIB,pT2,pN1,pM0,R0:  No residual tumor
+C3L-01037,True,3,3,1127.245006,HE normal | HE tumor,300.0,1,300.0,Deceased,PDAC,42,Male,,head,4.5,Stage IIB,pT3,pN1,pM0,R0:  No residual tumor
+C3L-01051,True,3,3,664.7173,HE normal | HE tumor,0.0,0,0.0,Living,PDAC,60,Male,,head,2.5,Stage IIB,pT2,pN1,pM0,R0:  No residual tumor
+C3L-01052,True,4,4,1580.9066400000002,HE normal | HE tumor,743.0,1,743.0,Deceased,PDAC,64,Female,,head,2.0,Stage IA,pT1c,pN0,pM0,R0:  No residual tumor
+C3L-01053,True,4,4,747.897662,HE normal | HE tumor,191.0,1,191.0,Deceased,PDAC,76,Female,,head,2.5,Stage IIB,pT2,pN1,pM0,R0:  No residual tumor
+C3L-01054,True,3,3,852.5346259999999,HE normal | HE tumor,794.0,0,794.0,Living,PDAC,38,Female,,head,3.5,Stage IIB,pT2,pN1,pM0,R2:  Macroscopic residual tumor
+C3L-01124,True,3,3,655.0787760000001,HE normal | HE tumor,399.0,0,399.0,Living,PDAC,70,Female,,head,2.2,Stage III,pT2,pN2,pMX,R0:  No residual tumor
+C3L-01328,True,4,4,383.519524,HE normal | HE tumor,270.0,0,270.0,Living,PDAC,71,Male,White,head,3.4,Stage IIB,pT2,pN1,pMX,RX:  Presence of residual tumor cannot be assessed
+C3L-01453,True,6,6,549.74513,HE normal | HE tumor,5.0,0,5.0,Living,Adenosquamous carcinoma,69,Male,White,tail,5.2,Stage IIA,pT3,pN0,pMX,RX:  Presence of residual tumor cannot be assessed
+C3L-01598,True,3,3,191.53653,HE normal | HE tumor,912.0,1,912.0,Deceased,PDAC,73,Female,White,tail,2.8,Stage IB,pT2,pN0,pM0,R0:  No residual tumor
+C3L-01637,True,4,4,260.552346,HE normal | HE tumor,715.0,1,715.0,Deceased,PDAC,78,Female,White,body,2.6,Stage IIB,pT2,pN1,pM0,R0:  No residual tumor
+C3L-01662,True,4,4,473.655868,HE normal | HE tumor,344.0,1,344.0,Deceased,PDAC,60,Female,White,head,3.0,Stage III,pT2,pN2,pM0,R1:  Microscopic residual tumor
+C3L-01687,True,4,4,1281.3944999999999,HE normal | HE tumor,376.0,1,376.0,Deceased,PDAC,78,Female,,head,5.0,Stage III,pT3,pN2,pM0,R1:  Microscopic residual tumor
+C3L-01689,True,4,4,1328.538672,HE normal | HE tumor,594.0,1,594.0,Deceased,PDAC,62,Male,,head,3.6,Stage IIB,pT2,pN1,pM0,R1:  Microscopic residual tumor
+C3L-01703,True,4,4,862.918012,HE normal | HE tumor,287.0,1,287.0,Deceased,PDAC,62,Male,,body and tail,6.5,Stage IIA,pT3,pN0,pM0,R0:  No residual tumor
+C3L-01971,True,6,6,275.15558400000003,HE normal | HE tumor,276.0,1,276.0,Deceased,PDAC,66,Male,White,head,2.0,Stage IA,pT1c,pN0,pMX,RX:  Presence of residual tumor cannot be assessed
+C3L-02109,True,4,4,625.502874,HE normal | HE tumor,261.0,0,261.0,Living,PDAC,79,Female,,body,4.5,Stage IIB,pT3,pN1,pM0,R1:  Microscopic residual tumor
+C3L-02112,True,4,4,695.642752,HE normal | HE tumor,679.0,0,679.0,Living,PDAC,66,Male,,head,4.5,Stage III,pT3,pN2,pM0,R0:  No residual tumor
+C3L-02115,True,4,4,1185.13607,HE normal | HE tumor,723.0,1,723.0,Deceased,PDAC,80,Male,,head,3.0,Stage III,pT2,pN2,pM0,R1:  Microscopic residual tumor
+C3L-02116,True,4,4,532.981396,HE normal | HE tumor,716.0,0,716.0,Living,PDAC,67,Male,,body,2.5,Stage IB,pT2,pN0,pM0,R0:  No residual tumor
+C3L-02118,True,4,4,721.2908239999999,HE normal | HE tumor,632.0,1,632.0,Deceased,PDAC,67,Female,,head,2.5,Stage IB,pT2,pN0,pM0,R0:  No residual tumor
+C3L-02463,True,6,6,476.905264,HE normal | HE tumor,740.0,0,740.0,Living,PDAC,63,Male,White,head,4.0,Stage IB,pT2,pN0,pMX,RX:  Presence of residual tumor cannot be assessed
+C3L-02604,True,1,1,90.420244,HE tumor,118.0,1,118.0,Deceased,PDAC,84,Female,White,tail,2.5,Stage IIB,pT2,pN1,pMX,R0:  No residual tumor
+C3L-02606,True,4,4,839.918448,HE normal | HE tumor,403.0,1,403.0,Deceased,Adenosquamous carcinoma,68,Female,,head,4.0,Stage IIB,pT2,pN1,pM0,R1:  Microscopic residual tumor
+C3L-02610,True,4,4,809.9128499999999,HE normal | HE tumor,190.0,1,190.0,Deceased,PDAC,80,Male,,head,4.5,Stage IIA,pT3,pN0,pM0,R1:  Microscopic residual tumor
+C3L-02613,True,4,4,1104.813306,HE normal | HE tumor,211.0,1,211.0,Deceased,Adenosquamous carcinoma,52,Female,,head,6.0,Stage IIB,pT3,pN1,pM0,R1:  Microscopic residual tumor
+C3L-02701,True,8,8,2587.430812,HE normal | HE tumor,243.0,1,243.0,Deceased,PDAC,72,Male,,body and tail,3.0,,pT2,pNX,pMX,RX:  Presence of residual tumor cannot be assessed
+C3L-02809,True,7,7,524.28141,HE normal | HE tumor,68.0,1,68.0,Deceased,PDAC,84,Male,White,head,5.5,Stage IIB,pT3,pN1,pMX,RX:  Presence of residual tumor cannot be assessed
+C3L-02890,True,4,4,813.038222,HE normal | HE tumor,785.0,0,785.0,Living,PDAC,65,Male,,head,7.5,Stage III,pT3,pN2,pM0,R0:  No residual tumor
+C3L-02897,True,1,1,164.377774,HE tumor,256.0,0,256.0,Living,PDAC,80,Male,White,head,2.7,Stage IB,pT2,pN0,pM0,R0:  No residual tumor
+C3L-02899,True,3,3,625.458768,HE normal | HE tumor,90.0,1,90.0,Deceased,PDAC,73,Male,White,head,7.0,Stage IV,pT3,pN2,pM1,RX:  Presence of residual tumor cannot be assessed
+C3L-03123,True,4,4,981.623484,HE normal | HE tumor,817.0,0,817.0,Living,PDAC,60,Female,,head,4.1,Stage IIB,pT3,pN1,pM0,R0:  No residual tumor
+C3L-03356,True,4,4,1302.73562,HE normal | HE tumor,549.0,0,549.0,Living,PDAC,71,Male,,head,3.5,Stage IIB,pT2,pN1,pM0,R0:  No residual tumor
+C3L-03388,True,2,2,533.804404,HE normal | HE tumor,11.0,1,11.0,Deceased,PDAC,68,Male,,head,3.2,Stage III,pT2,pN2,pM0,R0:  No residual tumor
+C3L-03394,True,3,3,389.042324,HE normal | HE tumor,369.0,0,369.0,Living,PDAC,65,Female,,body,1.5,Stage IA,pT1c,pN0,pMX,R0:  No residual tumor
+C3L-03395,True,3,3,1075.7433059999998,HE normal | HE tumor,,0,,,PDAC,78,Male,,tail,3.0,Stage III,pT2,pN2,pM0,R0:  No residual tumor
+C3L-03628,True,4,4,928.501372,HE normal | HE tumor,466.0,0,466.0,Living,PDAC,69,Female,,head,3.0,Stage III,pT2,pN2,pM0,R0:  No residual tumor
+C3L-03630,True,4,4,655.289072,HE normal | HE tumor,78.0,0,78.0,Living,PDAC,78,Male,,head,4.5,Stage IIB,pT3,pN1,pM0,R0:  No residual tumor
+C3L-03632,True,4,4,422.92859599999997,HE normal | HE tumor,330.0,0,330.0,Living,PDAC,74,Male,,head,2.1,Stage IB,pT2,pN0,pM0,R0:  No residual tumor
+C3L-03635,True,3,3,737.678444,HE tumor,313.0,0,313.0,Living,PDAC,63,Male,,tail,3.2,,pT2,pNX,pM0,R0:  No residual tumor
+C3L-03639,True,4,4,1028.483264,HE normal | HE tumor,246.0,1,246.0,Deceased,PDAC,76,Male,,head,3.9,Stage IB,pT2,pN0,pM0,R0:  No residual tumor
+C3L-03743,True,6,6,931.739336,HE normal | HE tumor,,1,,Deceased,PDAC,71,Female,White,head,2.9,Stage IIB,pT2,pN1,pMX,RX:  Presence of residual tumor cannot be assessed
+C3L-04027,True,8,8,3412.295386,HE normal | HE tumor,240.0,0,240.0,Living,PDAC,69,Male,,head,2.0,Stage IA,pT1c,pN0,pM0,R0:  No residual tumor
+C3L-04072,True,2,2,102.747714,HE normal | HE tumor,225.0,1,225.0,Deceased,PDAC,55,Male,Black or African American,head,4.9,Stage III,pT3,pN2,pM0,R0:  No residual tumor
+C3L-04080,True,4,4,304.434428,HE normal | HE tumor,20.0,1,20.0,Deceased,PDAC,70,Male,White,head,3.5,Stage IIB,pT2,pN1,pM0,R0:  No residual tumor
+C3L-04473,True,4,4,799.792278,HE normal | HE tumor,290.0,1,290.0,Deceased,PDAC,67,Female,,head and body,4.0,Stage III,pT2,pN2,pM0,R1:  Microscopic residual tumor
+C3L-04475,True,4,4,935.63504,HE normal | HE tumor,300.0,0,300.0,Living,PDAC,77,Male,,head,2.7,Stage III,pT2,pN2,pM0,R0:  No residual tumor
+C3L-04479,True,3,3,643.9504300000001,HE normal | HE tumor,356.0,0,356.0,Living,PDAC,66,Male,,head,1.7,Stage IIB,pT1c,pN1,pM0,R0:  No residual tumor
+C3L-04495,True,5,5,180.491512,HE normal | HE tumor,288.0,1,288.0,Deceased,PDAC,36,Female,,body and tail,4.8,Stage III,pT3,pN2,pM0,R1:  Microscopic residual tumor
+C3L-04848,True,4,4,596.6651360000001,HE normal | HE tumor,196.0,1,196.0,Deceased,PDAC,71,Female,,head,4.7,Stage IIB,pT3,pN1,pM0,R0:  No residual tumor
+C3L-04853,True,4,4,204.793286,HE normal | HE tumor,279.0,1,279.0,Deceased,PDAC,85,Female,,head,2.5,Stage IB,pT2,pN0,pM0,R0:  No residual tumor
+C3N-00198,True,5,5,1357.375082,HE normal | HE tumor,1364.0,0,1364.0,Living,PDAC,55,Male,White,body,3.5,Stage III,pT2,pN2,pMX,RX:  Presence of residual tumor cannot be assessed
+C3N-00249,True,5,5,686.63003,HE normal | HE tumor,1098.0,0,1098.0,Living,PDAC,71,Male,White,body,4.2,Stage IIB,pT3,pN1,pMX,RX:  Presence of residual tumor cannot be assessed
+C3N-00302,True,5,5,2768.6114820000003,HE normal | HE tumor,323.0,1,323.0,Deceased,PDAC,58,Male,,head,4.0,Stage IV,pT2,pN2,pM1,R1:  Microscopic residual tumor
+C3N-00303,True,5,5,2209.98939,HE normal | HE tumor,599.0,1,599.0,Deceased,PDAC,65,Male,,head,5.0,Stage III,pT3,pN2,pM0,R0:  No residual tumor
+C3N-00436,True,3,3,375.085754,HE normal | HE tumor,652.0,0,652.0,Living,PDAC,69,Female,,head,4.5,Stage IIA,pT3,pN0,pM0,R0:  No residual tumor
+C3N-00511,True,4,4,534.700784,HE normal | HE tumor,1001.0,1,1001.0,Deceased,PDAC,45,Female,,head,3.5,Stage IIB,pT2,pN1,pM0,R1:  Microscopic residual tumor
+C3N-00512,True,3,3,223.648366,HE normal | HE tumor,1006.0,1,1006.0,Deceased,PDAC,42,Male,,head,3.8,Stage III,pT2,pN2,pM0,R1:  Microscopic residual tumor
+C3N-00513,True,3,3,229.65627999999998,HE normal | HE tumor,425.0,1,425.0,Deceased,PDAC,63,Male,,head,3.5,Stage IIB,pT2,pN1,pM0,R1:  Microscopic residual tumor
+C3N-00514,True,3,3,318.427574,HE normal | HE tumor,795.0,1,795.0,Deceased,Adenosquamous carcinoma,60,Male,,head,4.0,Stage III,pT2,pN2,pM0,R0:  No residual tumor
+C3N-00516,True,3,3,282.830674,HE normal | HE tumor,688.0,0,688.0,Living,PDAC,68,Male,,head,4.0,Stage IB,pT2,pN0,pM0,R1:  Microscopic residual tumor
+C3N-00517,True,3,3,286.322128,HE normal | HE tumor,901.0,1,901.0,Deceased,PDAC,69,Female,,head,4.0,Stage IIB,pT2,pN1,pM0,R0:  No residual tumor
+C3N-00518,True,4,4,342.842554,HE normal | HE tumor,469.0,1,469.0,Deceased,PDAC,69,Male,,head,6.0,Stage IIA,pT3,pN0,pM0,R1:  Microscopic residual tumor
+C3N-00709,True,2,2,282.93861200000003,HE normal | HE tumor,,0,,,PDAC,81,Male,White,,,,pTX,pNX,pMX,
+C3N-00957,True,5,5,885.5841479999999,HE normal | HE tumor,880.0,0,880.0,Living,PDAC,74,Male,White,tail,5.0,Stage IIA,pT3,pN0,pMX,RX:  Presence of residual tumor cannot be assessed
+C3N-01011,True,5,5,970.40353,HE normal | HE tumor,1068.0,0,1068.0,Living,PDAC,77,Female,White,head,4.0,Stage III,pT2,pN2,pMX,RX:  Presence of residual tumor cannot be assessed
+C3N-01012,True,4,4,416.383604,HE normal | HE tumor,616.0,0,616.0,Living,PDAC,71,Male,White,head,2.5,Stage IB,pT2,pN0,pMX,RX:  Presence of residual tumor cannot be assessed
+C3N-01165,True,2,2,174.882982,HE tumor,240.0,1,240.0,Deceased,PDAC,63,Female,,head,2.5,Stage III,pT2,pN2,pM0,R0:  No residual tumor
+C3N-01166,True,2,2,224.819116,HE tumor,678.0,0,678.0,Living,PDAC,62,Female,,head,4.5,Stage III,pT3,pN2,pM0,R1:  Microscopic residual tumor
+C3N-01167,True,2,2,304.403768,HE tumor,640.0,0,640.0,Living,PDAC,77,Female,,head,3.5,Stage IIB,pT2,pN1,pM0,R1:  Microscopic residual tumor
+C3N-01168,True,2,2,208.443378,HE tumor,460.0,1,460.0,Deceased,PDAC,60,Female,,head,4.5,Stage IIB,pT3,pN1,pM0,R0:  No residual tumor
+C3N-01375,True,2,2,286.928282,HE tumor,142.0,1,142.0,Deceased,PDAC,70,Female,,head,3.5,Stage IIB,pT2,pN1,pM0,R1:  Microscopic residual tumor
+C3N-01380,True,2,2,290.183878,HE tumor,400.0,1,400.0,Deceased,PDAC,65,Male,,head,3.0,Stage IV,pT2,pN2,pM1,RX:  Presence of residual tumor cannot be assessed
+C3N-01381,True,2,2,517.5715299999999,HE tumor,454.0,1,454.0,Deceased,PDAC,43,Female,,head,2.0,Stage IIB,pT1c,pN1,pM0,R0:  No residual tumor
+C3N-01382,True,2,2,483.491924,HE tumor,734.0,1,734.0,Deceased,PDAC,74,Female,,head,2.5,Stage III,pT2,pN2,pM0,R0:  No residual tumor
+C3N-01383,True,2,2,243.83183200000002,HE tumor,667.0,0,667.0,Living,PDAC,80,Female,,head,4.0,Stage III,pT2,pN2,pM0,R0:  No residual tumor
+C3N-01388,True,2,2,206.372208,HE tumor,810.0,1,810.0,Deceased,PDAC,53,Female,,head,3.5,Stage III,pT2,pN2,pM0,R1:  Microscopic residual tumor
+C3N-01502,True,2,2,185.45327600000002,HE normal | HE tumor,1049.0,0,1049.0,Living,PDAC,75,Male,White,tail,4.6,Stage IIB,pT3,pN1,pMX,RX:  Presence of residual tumor cannot be assessed
+C3N-01714,True,2,2,239.83286600000002,HE tumor,435.0,1,435.0,Deceased,PDAC,63,Male,,head,3.0,Stage III,pT2,pN2,pM0,RX:  Presence of residual tumor cannot be assessed
+C3N-01715,True,2,2,262.008872,HE tumor,108.0,1,108.0,Deceased,PDAC,61,Female,,head,7.0,,pT3,pNX,pMX,RX:  Presence of residual tumor cannot be assessed
+C3N-01716,True,1,1,209.735568,HE tumor,335.0,1,335.0,Deceased,PDAC,50,Male,,head,2.5,Stage IV,pT4,pN2,pM1,R1:  Microscopic residual tumor
+C3N-01719,True,3,3,570.19541,HE normal | HE tumor,454.0,0,454.0,Living,PDAC,63,Female,,head,3.5,,pT2,pNX,pM0,RX:  Presence of residual tumor cannot be assessed
+C3N-01997,True,3,3,402.56135,HE normal | HE tumor,857.0,0,857.0,Living,PDAC,63,Male,,tail,3.0,Stage IB,pT2,pN0,pMX,R0:  No residual tumor
+C3N-01998,True,3,3,475.185378,HE normal | HE tumor,186.0,1,186.0,Deceased,PDAC,69,Male,,head,2.5,Stage IIB,pT2,pN1,pMX,R0:  No residual tumor
+C3N-02010,True,5,5,773.362352,HE normal | HE tumor,359.0,0,359.0,Living,PDAC,62,Female,Black or African American,head,4.1,Stage III,pT3,pN2,pMX,RX:  Presence of residual tumor cannot be assessed
+C3N-02295,True,2,2,445.72967800000004,HE normal | HE tumor,371.0,1,371.0,Deceased,PDAC,56,Female,,head,3.5,Stage IB,pT2,pN0,pMX,RX:  Presence of residual tumor cannot be assessed
+C3N-02573,True,3,3,286.612874,HE normal | HE tumor,479.0,0,479.0,Living,PDAC,41,Female,,body and tail,6.0,Stage IIB,pT3,pN1,pMX,R0:  No residual tumor
+C3N-02579,True,3,3,410.18102600000003,HE normal | HE tumor,358.0,1,358.0,Deceased,PDAC,51,Female,,head,0.5,Stage IA,pT1a,pN0,pMX,R0:  No residual tumor
+C3N-02585,True,3,3,400.012814,HE normal | HE tumor,754.0,0,754.0,Living,PDAC,65,Male,,body,2.0,Stage IA,pT1c,pN0,pMX,R0:  No residual tumor
+C3N-02589,True,2,2,274.86440200000004,HE normal | HE tumor,458.0,1,458.0,Deceased,PDAC,71,Male,,head,2.0,Stage IA,pT1c,pN0,pM0,R1:  Microscopic residual tumor
+C3N-02592,True,3,3,535.458386,HE normal | HE tumor,294.0,1,294.0,Deceased,PDAC,63,Female,,head,4.5,Stage IIB,pT3,pN1,pM0,R1:  Microscopic residual tumor
+C3N-02768,True,3,3,351.386644,HE normal | HE tumor,430.0,1,430.0,Deceased,Adenosquamous carcinoma,46,Male,,tail,3.0,Stage IIB,pT2,pN1,pMX,R0:  No residual tumor
+C3N-02940,True,3,3,347.495074,HE normal | HE tumor,664.0,0,664.0,Living,PDAC,64,Male,,head,4.5,Stage III,pT3,pN2,pMX,R0:  No residual tumor
+C3N-02944,True,3,3,311.507018,HE normal | HE tumor,609.0,0,609.0,Living,PDAC,61,Female,,tail,3.2,Stage IB,pT2,pN0,pMX,R0:  No residual tumor
+C3N-02971,True,3,3,671.668222,HE tumor,70.0,1,70.0,Deceased,PDAC,78,Female,White,tail,5.6,Stage IIA,pT3,pN0,pMX,RX:  Presence of residual tumor cannot be assessed
+C3N-02998,True,1,1,226.318398,HE tumor,122.0,1,122.0,Deceased,PDAC,64,Female,,head,5.0,Stage III,pT3,pN2,pM0,R1:  Microscopic residual tumor
+C3N-03000,True,1,1,122.809738,HE tumor,122.0,1,122.0,Deceased,PDAC,57,Male,,head,5.5,Stage IV,pT3,pN2,pM1,R1:  Microscopic residual tumor
+C3N-03006,True,2,2,472.265934,HE normal | HE tumor,708.0,0,708.0,Living,PDAC,64,Female,,head,3.3,Stage IIB,pT2,pN1,pM0,R0:  No residual tumor
+C3N-03007,True,1,1,121.007182,HE tumor,58.0,1,58.0,Deceased,PDAC,59,Male,,head,2.8,Stage III,pT2,pN2,pM0,R1:  Microscopic residual tumor
+C3N-03039,True,6,6,916.7261,HE normal | HE tumor,,0,,,PDAC,73,Female,White,,,,pTX,pNX,pMX,
+C3N-03061,True,3,3,291.479352,HE normal | HE tumor,348.0,1,348.0,Deceased,PDAC,62,Female,,body,3.0,Stage IIB,pT2,pN1,pMX,R0:  No residual tumor
+C3N-03069,True,3,3,345.846294,HE normal | HE tumor,,0,,,PDAC,50,Female,,body,6.5,Stage III,pT3,pN2,pM0,R0:  No residual tumor
+C3N-03086,True,3,3,276.348004,HE normal | HE tumor,733.0,0,733.0,Living,PDAC,69,Male,,body,4.5,Stage IIB,pT3,pN1,pMX,R0:  No residual tumor
+C3N-03173,True,2,2,273.188106,HE normal | HE tumor,32.0,0,32.0,Living,PDAC,64,Male,White,head,2.9,Stage III,pT2,pN2,pMX,RX:  Presence of residual tumor cannot be assessed
+C3N-03190,True,3,3,397.383616,HE normal | HE tumor,398.0,1,398.0,Deceased,PDAC,31,Male,,body,3.0,Stage IIB,pT2,pN1,pM0,R0:  No residual tumor
+C3N-03211,True,3,3,280.960636,HE normal | HE tumor,285.0,1,285.0,Deceased,PDAC,43,Male,,head,4.0,Stage III,pT2,pN2,pMX,R0:  No residual tumor
+C3N-03426,True,2,2,591.3990839999999,HE normal | HE tumor,122.0,1,122.0,Deceased,PDAC,68,Female,,head,5.0,Stage IV,pT3,pN1,pM1,R2:  Macroscopic residual tumor
+C3N-03428,True,2,2,537.455438,HE tumor,285.0,1,285.0,Deceased,PDAC,63,Male,,head,4.0,Stage IV,pT2,pNX,pM1,R2:  Macroscopic residual tumor
+C3N-03430,True,1,1,166.294074,HE tumor,39.0,1,39.0,Deceased,PDAC,54,Female,,head,5.0,Stage IV,pT3,pNX,pMX,R2:  Macroscopic residual tumor
+C3N-03439,True,2,2,407.52721199999996,HE normal | HE tumor,457.0,1,457.0,Deceased,PDAC,56,Female,,head,1.7,Stage IIB,pT1c,pN1,pM0,R0:  No residual tumor
+C3N-03440,True,2,2,596.326726,HE normal | HE tumor,315.0,0,315.0,Living,PDAC,54,Female,,head,4.0,Stage IB,pT2,pN0,pM0,R1:  Microscopic residual tumor
+C3N-03665,True,2,2,357.45291599999996,HE normal | HE tumor,728.0,0,728.0,Living,PDAC,63,Male,,head,3.5,Stage III,pT2,pN2,pM0,R0:  No residual tumor
+C3N-03666,True,1,1,292.765182,HE tumor,701.0,1,701.0,Deceased,PDAC,63,Male,,head,3.5,Stage IIB,pT2,pN1,pM0,R1:  Microscopic residual tumor
+C3N-03670,True,2,2,338.793454,HE normal | HE tumor,377.0,0,377.0,Living,PDAC,60,Male,,head,2.5,Stage III,pT2,pN2,pM0,R1:  Microscopic residual tumor
+C3N-03754,True,1,1,146.088678,HE tumor,483.0,0,483.0,Living,PDAC,44,Male,,head,2.8,Stage III,pT2,pN2,pM0,R1:  Microscopic residual tumor
+C3N-03780,True,2,2,350.48479399999997,HE normal | HE tumor,20.0,1,20.0,Deceased,PDAC,69,Female,,head,3.0,Stage IB,pT2,pN0,pM0,R1:  Microscopic residual tumor
+C3N-03839,True,4,4,183.56722,HE normal | HE tumor,696.0,0,696.0,Living,PDAC,54,Female,,head,4.0,Stage IIB,pT2,pN1,pM0,R0:  No residual tumor
+C3N-03840,True,3,3,284.058524,HE normal | HE tumor,696.0,0,696.0,Living,PDAC,59,Female,,body,3.5,Stage IIB,pT2,pN1,pM0,R0:  No residual tumor
+C3N-03853,True,3,3,263.712528,HE normal | HE tumor,259.0,0,259.0,Living,PDAC,49,Female,,head,3.0,Stage III,pT2,pN2,pM0,R0:  No residual tumor
+C3N-03884,True,3,3,255.30248999999998,HE normal | HE tumor,368.0,0,368.0,Living,PDAC,64,Female,,head,2.3,Stage III,pT2,pN2,pM0,R0:  No residual tumor
+C3N-04119,True,3,3,283.615554,HE normal | HE tumor,305.0,1,305.0,Deceased,PDAC,54,Male,,tail,3.0,Stage IIB,pT2,pN1,pMX,R0:  No residual tumor
+C3N-04126,True,3,3,193.103752,HE normal | HE tumor,348.0,1,348.0,Deceased,PDAC,42,Male,,head,3.5,Stage III,pT2,pN2,pM0,R0:  No residual tumor
+C3N-04282,True,2,2,322.07592,HE normal | HE tumor,303.0,1,303.0,Deceased,PDAC,75,Male,,head,4.0,Stage IV,pT2,pN1,pM1,R1:  Microscopic residual tumor
+C3N-04283,True,2,2,798.835972,HE normal | HE tumor,1.0,1,1.0,Deceased,PDAC,66,Female,,head and body,7.0,Stage III,pT3,pN2,pM0,R2:  Macroscopic residual tumor
+C3N-04284,True,2,2,790.3088640000001,HE normal | HE tumor,8.0,1,8.0,Deceased,PDAC,80,Female,,head,3.0,Stage III,pT2,pN2,pM0,R0:  No residual tumor
