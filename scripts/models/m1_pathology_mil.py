@@ -135,9 +135,12 @@ class PathologySpatialMIL(nn.Module):
         fused_tiles = self.tile_fusion(torch.cat([image_features, spatial_features], dim=-1))
         slide_feature, attention = self.mil(fused_tiles)
         logits = self.classifier(slide_feature).unsqueeze(0)
+        hazards = torch.sigmoid(logits)
+        cumulative_risk = 1.0 - torch.cumprod(1.0 - hazards, dim=-1)
         return {
             "logits": logits,
-            "risk_percent": torch.sigmoid(logits) * 100.0,
+            "hazard_percent": hazards * 100.0,
+            "risk_percent": cumulative_risk * 100.0,
             "attention": attention,
             "slide_feature": slide_feature,
         }

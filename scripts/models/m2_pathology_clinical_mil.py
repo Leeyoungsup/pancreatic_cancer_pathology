@@ -130,9 +130,12 @@ class PathologyClinicalMIL(nn.Module):
         clinical_embedding = self.clinical_embedding(clinical_features.to(image_features.device)).squeeze(0)
         fused_slide = torch.cat([slide_feature, clinical_embedding], dim=-1)
         logits = self.classifier(fused_slide).unsqueeze(0)
+        hazards = torch.sigmoid(logits)
+        cumulative_risk = 1.0 - torch.cumprod(1.0 - hazards, dim=-1)
         return {
             "logits": logits,
-            "risk_percent": torch.sigmoid(logits) * 100.0,
+            "hazard_percent": hazards * 100.0,
+            "risk_percent": cumulative_risk * 100.0,
             "attention": attention,
             "slide_feature": slide_feature,
             "clinical_embedding": clinical_embedding,
