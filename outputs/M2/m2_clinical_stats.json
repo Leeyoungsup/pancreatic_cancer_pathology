@@ -1,0 +1,8 @@
+{
+  "age_mean": 64.77775135991932,
+  "age_std": 10.548107726126771,
+  "sex_encoding": [
+    "sex_male",
+    "sex_female"
+  ]
+}
