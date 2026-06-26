@@ -1,0 +1,6 @@
+dataset,case_id,case_dir,metadata_path,n_tiles,slide_width,slide_height,os_time_days,os_event,exclude_reason
+CPTAC_PDAC,C3L-03395,../../data/pancreatic_cancer_pathology/dst/Image/CPTAC_PDAC/C3L-03395,../../data/pancreatic_cancer_pathology/dst/Image/CPTAC_PDAC/C3L-03395/tile_metadata.csv,89,43824,24832,,0,missing_os_time
+CPTAC_PDAC,C3L-03743,../../data/pancreatic_cancer_pathology/dst/Image/CPTAC_PDAC/C3L-03743,../../data/pancreatic_cancer_pathology/dst/Image/CPTAC_PDAC/C3L-03743/tile_metadata.csv,50,31872,36017,,1,missing_os_time
+CPTAC_PDAC,C3N-00709,../../data/pancreatic_cancer_pathology/dst/Image/CPTAC_PDAC/C3N-00709,../../data/pancreatic_cancer_pathology/dst/Image/CPTAC_PDAC/C3N-00709/tile_metadata.csv,32,21911,17634,,0,missing_os_time
+CPTAC_PDAC,C3N-03039,../../data/pancreatic_cancer_pathology/dst/Image/CPTAC_PDAC/C3N-03039,../../data/pancreatic_cancer_pathology/dst/Image/CPTAC_PDAC/C3N-03039/tile_metadata.csv,53,31871,21131,,0,missing_os_time
+CPTAC_PDAC,C3N-03069,../../data/pancreatic_cancer_pathology/dst/Image/CPTAC_PDAC/C3N-03069,../../data/pancreatic_cancer_pathology/dst/Image/CPTAC_PDAC/C3N-03069/tile_metadata.csv,37,25895,15706,,0,missing_os_time
