@@ -62,6 +62,35 @@ def hazards_to_cumulative_risk(logits: torch.Tensor) -> torch.Tensor:
     return 1.0 - survival
 
 
+def cox_ph_loss(
+    risk_scores: torch.Tensor,
+    times: torch.Tensor,
+    events: torch.Tensor,
+) -> torch.Tensor:
+    """Negative Cox partial log-likelihood.
+
+    Higher risk score indicates shorter survival. The loss is computed within
+    the provided case batch, so the batch should contain multiple cases.
+    """
+    risk_scores = risk_scores.reshape(-1)
+    times = times.reshape(-1).to(risk_scores.device).float()
+    events = events.reshape(-1).to(risk_scores.device).float()
+
+    valid = torch.isfinite(times)
+    risk_scores = risk_scores[valid]
+    times = times[valid]
+    events = events[valid]
+    if risk_scores.numel() == 0 or events.sum() == 0:
+        return risk_scores.sum() * 0.0
+
+    order = torch.argsort(times, descending=True)
+    sorted_risk = risk_scores[order]
+    sorted_events = events[order]
+    log_cumsum_exp = torch.logcumsumexp(sorted_risk, dim=0)
+    event_terms = (sorted_risk - log_cumsum_exp) * sorted_events
+    return -event_terms.sum() / sorted_events.sum().clamp_min(1.0)
+
+
 def harrell_c_index(times: Sequence[float], events: Sequence[int], risks: Sequence[float]) -> float:
     """Harrell's concordance index using higher risk = shorter survival."""
     times_arr = np.asarray(times, dtype=float)

@@ -24,6 +24,8 @@ class M2ModelConfig:
     max_tiles: int = 256
     feature_batch_size: int = 32
     freeze_feature_extractor: bool = True
+    use_spatial_embedding: bool = True
+    pooling_mode: str = "attention"
 
 
 class SpatialEmbedding(nn.Module):
@@ -73,15 +75,27 @@ class PathologyClinicalMIL(nn.Module):
             for parameter in self.feature_extractor.parameters():
                 parameter.requires_grad = False
 
-        self.spatial_embedding = SpatialEmbedding(config.coord_dim, config.spatial_dim, config.dropout)
+        if config.pooling_mode not in {"attention", "mean"}:
+            raise ValueError(f"pooling_mode must be 'attention' or 'mean', got {config.pooling_mode!r}")
+
+        self.spatial_embedding = (
+            SpatialEmbedding(config.coord_dim, config.spatial_dim, config.dropout)
+            if config.use_spatial_embedding
+            else None
+        )
         self.clinical_embedding = ClinicalEmbedding(config.clinical_dim, config.clinical_embed_dim, config.dropout)
+        fusion_input_dim = config.feature_dim + (config.spatial_dim if config.use_spatial_embedding else 0)
         self.tile_fusion = nn.Sequential(
-            nn.Linear(config.feature_dim + config.spatial_dim, config.fusion_dim),
+            nn.Linear(fusion_input_dim, config.fusion_dim),
             nn.LayerNorm(config.fusion_dim),
             nn.GELU(),
             nn.Dropout(config.dropout),
         )
-        self.mil = GatedAttentionMIL(config.fusion_dim, config.mil_hidden_dim, config.dropout)
+        self.mil = (
+            GatedAttentionMIL(config.fusion_dim, config.mil_hidden_dim, config.dropout)
+            if config.pooling_mode == "attention"
+            else None
+        )
         self.classifier = nn.Sequential(
             nn.LayerNorm(config.fusion_dim + config.clinical_embed_dim),
             nn.Dropout(config.dropout),
@@ -123,9 +137,22 @@ class PathologyClinicalMIL(nn.Module):
         clinical_features: torch.Tensor,
     ) -> dict[str, torch.Tensor]:
         image_features = self.extract_tile_features(tile_images)
-        spatial_features = self.spatial_embedding(coords.to(image_features.device))
-        fused_tiles = self.tile_fusion(torch.cat([image_features, spatial_features], dim=-1))
-        slide_feature, attention = self.mil(fused_tiles)
+        if self.spatial_embedding is not None:
+            spatial_features = self.spatial_embedding(coords.to(image_features.device))
+            tile_input = torch.cat([image_features, spatial_features], dim=-1)
+        else:
+            tile_input = image_features
+        fused_tiles = self.tile_fusion(tile_input)
+        if self.mil is None:
+            slide_feature = fused_tiles.mean(dim=0)
+            attention = torch.full(
+                (fused_tiles.shape[0],),
+                fill_value=1.0 / max(fused_tiles.shape[0], 1),
+                dtype=fused_tiles.dtype,
+                device=fused_tiles.device,
+            )
+        else:
+            slide_feature, attention = self.mil(fused_tiles)
 
         clinical_embedding = self.clinical_embedding(clinical_features.to(image_features.device)).squeeze(0)
         fused_slide = torch.cat([slide_feature, clinical_embedding], dim=-1)

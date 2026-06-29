@@ -1,0 +1,5 @@
+dataset,risk_group,n_cases,n_events,event_rate,median_os_days,median_risk_score
+CPTAC_external,High,65,42,0.6461538461538462,399.0,0.2438572347164154
+CPTAC_external,Low,65,34,0.5230769230769231,457.0,-2.4222941398620605
+TCGA_test,High,8,5,0.625,438.0,-0.9152452051639557
+TCGA_test,Low,8,5,0.625,529.0,-3.8190908432006836

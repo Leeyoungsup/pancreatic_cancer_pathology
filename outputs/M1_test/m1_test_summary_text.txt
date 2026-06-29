@@ -1,0 +1,2 @@
+TCGA_test: n=16, events=10, C-index=0.535 (95% CI 0.292-0.776), mean AUROC=0.607 (95% CI 0.244-0.879), mean AUPRC=0.507, log-rank p=0.868.
+CPTAC_external: n=130, events=76, C-index=0.532 (95% CI 0.458-0.600), mean AUROC=0.532 (95% CI 0.437-0.625), mean AUPRC=0.490, log-rank p=0.202.

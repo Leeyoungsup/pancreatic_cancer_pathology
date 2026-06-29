@@ -20,6 +20,8 @@ class M1ModelConfig:
     max_tiles: int = 256
     feature_batch_size: int = 32
     freeze_feature_extractor: bool = True
+    use_spatial_embedding: bool = True
+    pooling_mode: str = "attention"
 
 
 class SpatialEmbedding(nn.Module):
@@ -72,21 +74,33 @@ class PathologySpatialMIL(nn.Module):
             for parameter in self.feature_extractor.parameters():
                 parameter.requires_grad = False
 
-        self.spatial_embedding = SpatialEmbedding(
-            coord_dim=config.coord_dim,
-            embed_dim=config.spatial_dim,
-            dropout=config.dropout,
+        if config.pooling_mode not in {"attention", "mean"}:
+            raise ValueError(f"pooling_mode must be 'attention' or 'mean', got {config.pooling_mode!r}")
+
+        self.spatial_embedding = (
+            SpatialEmbedding(
+                coord_dim=config.coord_dim,
+                embed_dim=config.spatial_dim,
+                dropout=config.dropout,
+            )
+            if config.use_spatial_embedding
+            else None
         )
+        fusion_input_dim = config.feature_dim + (config.spatial_dim if config.use_spatial_embedding else 0)
         self.tile_fusion = nn.Sequential(
-            nn.Linear(config.feature_dim + config.spatial_dim, config.fusion_dim),
+            nn.Linear(fusion_input_dim, config.fusion_dim),
             nn.LayerNorm(config.fusion_dim),
             nn.GELU(),
             nn.Dropout(config.dropout),
         )
-        self.mil = GatedAttentionMIL(
-            input_dim=config.fusion_dim,
-            hidden_dim=config.mil_hidden_dim,
-            dropout=config.dropout,
+        self.mil = (
+            GatedAttentionMIL(
+                input_dim=config.fusion_dim,
+                hidden_dim=config.mil_hidden_dim,
+                dropout=config.dropout,
+            )
+            if config.pooling_mode == "attention"
+            else None
         )
         self.classifier = nn.Sequential(
             nn.LayerNorm(config.fusion_dim),
@@ -131,9 +145,22 @@ class PathologySpatialMIL(nn.Module):
             raise ValueError("tile_images and coords must have the same number of tiles.")
 
         image_features = self.extract_tile_features(tile_images)
-        spatial_features = self.spatial_embedding(coords.to(image_features.device))
-        fused_tiles = self.tile_fusion(torch.cat([image_features, spatial_features], dim=-1))
-        slide_feature, attention = self.mil(fused_tiles)
+        if self.spatial_embedding is not None:
+            spatial_features = self.spatial_embedding(coords.to(image_features.device))
+            tile_input = torch.cat([image_features, spatial_features], dim=-1)
+        else:
+            tile_input = image_features
+        fused_tiles = self.tile_fusion(tile_input)
+        if self.mil is None:
+            slide_feature = fused_tiles.mean(dim=0)
+            attention = torch.full(
+                (fused_tiles.shape[0],),
+                fill_value=1.0 / max(fused_tiles.shape[0], 1),
+                dtype=fused_tiles.dtype,
+                device=fused_tiles.device,
+            )
+        else:
+            slide_feature, attention = self.mil(fused_tiles)
         logits = self.classifier(slide_feature).unsqueeze(0)
         hazards = torch.sigmoid(logits)
         cumulative_risk = 1.0 - torch.cumprod(1.0 - hazards, dim=-1)

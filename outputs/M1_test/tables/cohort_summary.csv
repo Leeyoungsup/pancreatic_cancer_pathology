@@ -1,0 +1,3 @@
+dataset,n_cases,n_events,event_rate,median_os_days,iqr_os_days,median_risk_score,iqr_risk_score,median_tiles_used
+CPTAC_external,130,76,0.5846153846153846,412.5,280.5-699.8,-1.2602012753486633,-2.418-0.239,42.0
+TCGA_test,16,10,0.625,472.5,348.5-689.5,-2.7938252687454224,-3.785--0.940,202.5
