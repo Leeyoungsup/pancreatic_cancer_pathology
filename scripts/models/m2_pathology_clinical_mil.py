@@ -7,7 +7,7 @@ import torch
 from torch import nn
 import torch.nn.functional as F
 
-from scripts.models.m1_pathology_mil import GatedAttentionMIL
+from scripts.models.m1_pathology_mil import GatedAttentionMIL, LatentRiskTopKPooling
 
 
 @dataclass
@@ -75,8 +75,11 @@ class PathologyClinicalMIL(nn.Module):
             for parameter in self.feature_extractor.parameters():
                 parameter.requires_grad = False
 
-        if config.pooling_mode not in {"attention", "mean"}:
-            raise ValueError(f"pooling_mode must be 'attention' or 'mean', got {config.pooling_mode!r}")
+        if config.pooling_mode not in {"attention", "mean", "risk_topk"}:
+            raise ValueError(
+                "pooling_mode must be 'attention', 'mean', or 'risk_topk', "
+                f"got {config.pooling_mode!r}"
+            )
 
         self.spatial_embedding = (
             SpatialEmbedding(config.coord_dim, config.spatial_dim, config.dropout)
@@ -96,10 +99,20 @@ class PathologyClinicalMIL(nn.Module):
             if config.pooling_mode == "attention"
             else None
         )
+        self.risk_pooling = (
+            LatentRiskTopKPooling(config.fusion_dim, config.mil_hidden_dim, config.dropout)
+            if config.pooling_mode == "risk_topk"
+            else None
+        )
+        pathology_slide_dim = (
+            self.risk_pooling.output_dim
+            if self.risk_pooling is not None
+            else config.fusion_dim
+        )
         self.classifier = nn.Sequential(
-            nn.LayerNorm(config.fusion_dim + config.clinical_embed_dim),
+            nn.LayerNorm(pathology_slide_dim + config.clinical_embed_dim),
             nn.Dropout(config.dropout),
-            nn.Linear(config.fusion_dim + config.clinical_embed_dim, config.n_outputs),
+            nn.Linear(pathology_slide_dim + config.clinical_embed_dim, config.n_outputs),
         )
 
     @staticmethod
@@ -143,7 +156,11 @@ class PathologyClinicalMIL(nn.Module):
         else:
             tile_input = image_features
         fused_tiles = self.tile_fusion(tile_input)
-        if self.mil is None:
+        tile_risk_score = None
+        risk_stats = None
+        if self.risk_pooling is not None:
+            slide_feature, attention, tile_risk_score, risk_stats = self.risk_pooling(fused_tiles)
+        elif self.mil is None:
             slide_feature = fused_tiles.mean(dim=0)
             attention = torch.full(
                 (fused_tiles.shape[0],),
@@ -165,6 +182,8 @@ class PathologyClinicalMIL(nn.Module):
             "risk_percent": cumulative_risk * 100.0,
             "attention": attention,
             "slide_feature": slide_feature,
+            "tile_risk_score": tile_risk_score,
+            "risk_stats": risk_stats,
             "clinical_embedding": clinical_embedding,
         }
 

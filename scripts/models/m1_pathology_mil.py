@@ -63,6 +63,60 @@ class GatedAttentionMIL(nn.Module):
         return bag_feature, attention
 
 
+class LatentRiskTopKPooling(nn.Module):
+    """Pool tile features using a weakly supervised latent tile-risk score.
+
+    The tile-risk score is not supervised by tile-level labels. It is learned
+    only through the slide-level objective and should be interpreted as a
+    survival-associated latent score.
+    """
+
+    def __init__(self, input_dim: int, hidden_dim: int = 256, dropout: float = 0.25):
+        super().__init__()
+        self.risk_head = nn.Sequential(
+            nn.Linear(input_dim, hidden_dim),
+            nn.LayerNorm(hidden_dim),
+            nn.GELU(),
+            nn.Dropout(dropout),
+            nn.Linear(hidden_dim, 1),
+        )
+        self.output_dim = input_dim * 5 + 5
+
+    @staticmethod
+    def _topk_mean(tile_features: torch.Tensor, scores: torch.Tensor, fraction: float) -> torch.Tensor:
+        n_tiles = tile_features.shape[0]
+        k = max(1, int(torch.ceil(torch.tensor(n_tiles * fraction)).item()))
+        k = min(k, n_tiles)
+        indices = torch.topk(scores, k=k, largest=True).indices
+        return tile_features.index_select(0, indices).mean(dim=0)
+
+    def forward(self, tile_features: torch.Tensor) -> tuple[torch.Tensor, torch.Tensor, torch.Tensor, torch.Tensor]:
+        raw_risk = self.risk_head(tile_features).squeeze(-1)
+        risk_score = torch.sigmoid(raw_risk)
+        risk_weight = torch.softmax(raw_risk, dim=0)
+
+        global_mean = tile_features.mean(dim=0)
+        global_std = tile_features.std(dim=0, unbiased=False)
+        risk_weighted_mean = torch.sum(tile_features * risk_weight.unsqueeze(-1), dim=0)
+        top10_mean = self._topk_mean(tile_features, risk_score, fraction=0.10)
+        top25_mean = self._topk_mean(tile_features, risk_score, fraction=0.25)
+
+        risk_stats = torch.stack(
+            [
+                risk_score.mean(),
+                risk_score.std(unbiased=False),
+                risk_score.max(),
+                self._topk_mean(risk_score.unsqueeze(-1), risk_score, fraction=0.10).squeeze(0),
+                self._topk_mean(risk_score.unsqueeze(-1), risk_score, fraction=0.25).squeeze(0),
+            ]
+        )
+        slide_feature = torch.cat(
+            [global_mean, global_std, risk_weighted_mean, top10_mean, top25_mean, risk_stats],
+            dim=0,
+        )
+        return slide_feature, risk_weight, risk_score, risk_stats
+
+
 class PathologySpatialMIL(nn.Module):
     def __init__(self, feature_extractor: nn.Module, config: M1ModelConfig):
         super().__init__()
@@ -74,8 +128,11 @@ class PathologySpatialMIL(nn.Module):
             for parameter in self.feature_extractor.parameters():
                 parameter.requires_grad = False
 
-        if config.pooling_mode not in {"attention", "mean"}:
-            raise ValueError(f"pooling_mode must be 'attention' or 'mean', got {config.pooling_mode!r}")
+        if config.pooling_mode not in {"attention", "mean", "risk_topk"}:
+            raise ValueError(
+                "pooling_mode must be 'attention', 'mean', or 'risk_topk', "
+                f"got {config.pooling_mode!r}"
+            )
 
         self.spatial_embedding = (
             SpatialEmbedding(
@@ -102,10 +159,20 @@ class PathologySpatialMIL(nn.Module):
             if config.pooling_mode == "attention"
             else None
         )
+        self.risk_pooling = (
+            LatentRiskTopKPooling(config.fusion_dim, config.mil_hidden_dim, config.dropout)
+            if config.pooling_mode == "risk_topk"
+            else None
+        )
+        classifier_input_dim = (
+            self.risk_pooling.output_dim
+            if self.risk_pooling is not None
+            else config.fusion_dim
+        )
         self.classifier = nn.Sequential(
-            nn.LayerNorm(config.fusion_dim),
+            nn.LayerNorm(classifier_input_dim),
             nn.Dropout(config.dropout),
-            nn.Linear(config.fusion_dim, config.n_outputs),
+            nn.Linear(classifier_input_dim, config.n_outputs),
         )
 
     @staticmethod
@@ -151,7 +218,11 @@ class PathologySpatialMIL(nn.Module):
         else:
             tile_input = image_features
         fused_tiles = self.tile_fusion(tile_input)
-        if self.mil is None:
+        tile_risk_score = None
+        risk_stats = None
+        if self.risk_pooling is not None:
+            slide_feature, attention, tile_risk_score, risk_stats = self.risk_pooling(fused_tiles)
+        elif self.mil is None:
             slide_feature = fused_tiles.mean(dim=0)
             attention = torch.full(
                 (fused_tiles.shape[0],),
@@ -170,6 +241,8 @@ class PathologySpatialMIL(nn.Module):
             "risk_percent": cumulative_risk * 100.0,
             "attention": attention,
             "slide_feature": slide_feature,
+            "tile_risk_score": tile_risk_score,
+            "risk_stats": risk_stats,
         }
 
 
