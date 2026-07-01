@@ -4,11 +4,12 @@ import pandas as pd
 
 
 DATA_PATH = Path("../../data")
+RESULT_PATH = Path("../../results")
 PROJECT_DATA_PATH = DATA_PATH / "pancreatic_cancer_pathology"
 RAW_PATH = PROJECT_DATA_PATH / "raw"
 TCGA_PATH = RAW_PATH / "TCGA_PAAD"
 CPTAC_PATH = RAW_PATH / "CPTAC_PDAC"
-OUTPUT_DIR = Path("outputs/data_verification/common_data")
+OUTPUT_DIR = RESULT_PATH / "pancreatic_cancer_pathology" / "data_verification" / "common_data"
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 
